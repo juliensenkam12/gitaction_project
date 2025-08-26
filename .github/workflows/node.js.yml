@@ -121,7 +121,7 @@ jobs:
         with:
           context: ./api  
           push: true
-          tags: Julien/backend:latest
+          tags: Juliensenkam12/backend:latest
           file: ./api/Dockerfile
 
   build_frontend_docker_image_and_push:
@@ -145,5 +145,5 @@ jobs:
         with:
           context: ./client
           push: true
-          tags: Julien/frontend:latest
+          tags: Juliensenkam12/frontend:latest
           file: ./client/Dockerfile
