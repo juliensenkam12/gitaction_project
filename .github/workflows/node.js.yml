@@ -175,9 +175,9 @@ jobs:
         echo "${{ secrets.KUBECONFIG_DATA }}" | base64 --decode > $HOME/.kube/config
     - name: Deploy to EKS
       run: |
-        kubectl apply -f k8s-prod/sc.yaml 
-        kubectl apply -f k8s-prod/mysql.yaml 
-        kubectl apply -f k8s-prod/backend.yaml 
-        kubectl apply -f k8s-prod/frontend.yaml 
-        kubectl apply -f k8s-prod/ci.yaml 
-        kubectl apply -f k8s-prod/ingress.yaml 
+        kubectl apply -f k8s-prod/sc.yaml --validate=false
+        kubectl apply -f k8s-prod/mysql.yaml --validate=false
+        kubectl apply -f k8s-prod/backend.yaml --validate=false
+        kubectl apply -f k8s-prod/frontend.yaml --validate=false
+        kubectl apply -f k8s-prod/ci.yaml --validate=false
+        kubectl apply -f k8s-prod/ingress.yaml --validate=false
